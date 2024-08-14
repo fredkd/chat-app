@@ -4,16 +4,17 @@
 
 const Login = () => {
 
-    const [currentState, setCurrentState] = useState("sign up")
+    const [currState, setCurrState] = useState("Sign up")
     return(
         <div className="login">
             <img src={assets.logo_icon} alt="" className="logo" />
             <form action="" className="login-form">
-                <h2>{currentState}</h2>
-                {currentState === "sign up "?<input type="text" placeholder="username" className="form-input"  required/>: null}
+                <h2>{currState}</h2>
+                {currState === "Sign up" ? <input type="text" placeholder="username" className="form-input"  required/>:null}
                 <input type="email" placeholder="Email address" className="form-input" required />
-                <input type="password" placeholder="Passoword" className="form-input" required />
-                <button type="submit">{currentState === "sign up"?"create Account":"Login Now"}</button>
+                <input type="password" placeholder="Password" className="form-input" required />
+                <button type="submit">{currState === "Sign up"?"create Account":"Login Now"}</button>
+        
 
                 <div className="login-term">
                     <input type="checkbox"  />
@@ -22,13 +23,16 @@ const Login = () => {
 
                 <div className="login-forgot">
                     {
-                        currentState === "sign up"?
-                        <p className="login-toggle">Already have an account 
-                            <span onClick={()=>setCurrentState("login")}>Login here</span>  
-                        </p> :
-                        <p className="login-toggle">Create An Account
-                            <span onClick={()=>setCurrentState("Sign up")}>Click here</span>  
-                        </p>                       
+                        currState === "Sign up"
+                        ?
+                        <p className="login-toogle">Already have an account? 
+                            <span onClick={() => setCurrState("Login")}> Login here</span>
+                        </p>
+                        :
+                        <p className="login-toogle">Create An Account 
+                            <span onClick={() => setCurrState("Sign up")}> Click here</span>
+                        </p>
+
                     }
 
 

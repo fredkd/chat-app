@@ -1,6 +1,6 @@
 .login{
     min-height: 100vh  ;
-    background: url(/background.png) no-repeat;
+    background: url(/src/assets/background.png) no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -25,11 +25,11 @@
     padding: 8px 10px;
     border: 1px solid #c9c9c9;
     border-radius: 4px;
-    outline-color: #077EFF;
+    outline-color: #00ad1d;
 }
 .login-form button{
     padding: 10px;
-    background-color: #077eff;
+    background-color: #00ad1d;
     color: white;
     font-size: 16px;
     border: none;
@@ -49,8 +49,8 @@
     flex-direction: column;
     gap: 5px;
 }
-.login-toggle span{
+.login-forgot span{
     font-weight: 500;
-    color: #077EFF;
+    color: #00ad1d;
     cursor: pointer;  
 }
